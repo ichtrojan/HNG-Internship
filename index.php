@@ -10,7 +10,7 @@
    }
 
    $sql = 'SELECT id, name, age FROM human';
-   mysql_select_db('HNG');
+   mysql_select_db('hng');
    $retval = mysql_query( $sql, $conn );
 
    if(! $retval ) {
@@ -20,8 +20,7 @@
    while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
       echo "ID :{$row['id']}  <br> ".
          "NAME : {$row['name']} <br> ".
-         "AGE : {$row['age']} <br> ".
-         "--------------------------------<br>";
+         "AGE : {$row['age']} <br> ";
    }
 
    echo "Fetched data successfully\n";
